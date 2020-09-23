@@ -1,1 +1,11 @@
-<h1>Hello</h1>
+{% extends 'functions/base.html' %}
+
+{% block content %}
+
+<ul>
+	{% for diary in diary %}
+	<li><a href="{% url 'viewdiary' diary.id %}">{{ diary.title }}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}
