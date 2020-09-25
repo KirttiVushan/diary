@@ -79,3 +79,6 @@ def viewdiary(request, diary_pk):
 			return render(request, 'functions/viewdiary.html', {'diarys':diarys , 'form':form , 'error':'bad info'})
 
 
+
+def about(request):
+	return render (request, 'functions/about.html')

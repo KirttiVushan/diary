@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -7,6 +8,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    {# MEDIUM STYLE EDITOR#}
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
 
     <title>Diary</title>
   </head>
@@ -28,6 +33,7 @@
 
     <a href="{% url 'signin' %}">Sign up</a>
     <a href="{% url 'login_user' %}">Login</a>
+    <a href="{% url 'about' %}">About</a>
 
     {% endif %}
 
@@ -36,6 +42,15 @@
 
     {% block content %}
     {% endblock %}
+
+
+    <script src="js/medium-editor.js"></script>
+
+
+    
+
+</body>
+</html>
 
 
 
