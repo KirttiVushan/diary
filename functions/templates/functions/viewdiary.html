@@ -7,9 +7,15 @@
 
 
 <form method="POST">
-{% csrf_token %}
-{{ form.as_p }}
-<button type="submit">Save</button>
+	{% csrf_token %}
+	{{ form.as_p }}
+  <button type="submit">Save</button>
+</form>
+
+
+<form method="POST" action="{% url 'delete_diary' diarys.id %}">
+	{% csrf_token %}
+  <button  type="submit">Delete</button>
 </form>
 
 

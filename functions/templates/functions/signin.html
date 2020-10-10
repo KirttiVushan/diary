@@ -5,11 +5,13 @@
 <h1>Signup</h1>
 
 <h2>{{error}}</h2>
-<form method="POST">
+
+<form id="signin_form" method="POST">
 {% csrf_token %}
 {{form.as_p}}
 
 <button type="submit">Sign-in</button>
 </form>
+
 
 {% endblock %}

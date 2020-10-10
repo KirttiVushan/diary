@@ -1,5 +1,5 @@
-<!doctype html>
-{% load static %}
+<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -9,6 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+
     {# MEDIUM STYLE EDITOR#}
     <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
@@ -16,24 +19,52 @@
     <title>Diary</title>
   </head>
   <body>
+    <h1 id="tag">HELLO</h1>
+      
+  	
+  	  <!-- if user logged in -->
+
     {% if user.is_authenticated %}
 
-    Logged In as {{ user.username }}
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+     <a class="navbar-brand" href="#">Diary</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <a href="{% url 'new' %}">New Diary</a>
-    <a href="{% url 'diary' %}">Diary</a>
-
-    
-    <form action="{% url 'logout_user' %}" method="POST">
-     {% csrf_token %}
-     <button type="submit">Logout</button>   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'new' %}">New Diary <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'diary' %}">Diary</a>
+      </li>
+     </ul>
+     <form class="form-inline my-2 my-lg-0" action="{% url 'logout_user' %}" method="POST">
+      {% csrf_token %}
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
     </form>
+    </div>
+    </nav>
+
+    <div id="welcome">
+    Welcome {{ user.username }}
+    </div>
+
+    <!-- if user not logged In -->
 
     {% else %}
 
-    <a href="{% url 'signin' %}">Sign up</a>
-    <a href="{% url 'login_user' %}">Login</a>
+    <div class="register">
+	<button><a href="{% url 'signin' %}">Sign up</a></button>
+    <button><a href="{% url 'login_user' %}">Login</a></button>
+    </div>
+
+    <div class="footer">
     <a href="{% url 'about' %}">About</a>
+    </div>
+    </div>
 
     {% endif %}
 

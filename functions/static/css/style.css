@@ -1,0 +1,40 @@
+body
+{
+	background: none;
+}
+.container
+{
+	text-align: center;
+	width: 400px;
+}
+html 
+{ 
+  
+  background: url("images/background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+	
+#title
+{
+	font-weight: 50px;
+	color: red;
+}
+.register
+{
+	
+}
+#signin_form
+{
+
+}
+#tag
+{
+	font-weight: lighter;
+}
+h1
+{
+	color: red;
+}

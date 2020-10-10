@@ -5,7 +5,9 @@ from django.db import IntegrityError
 from django.contrib.auth import login, logout , authenticate
 from .forms import Content_field
 from .models import Diary
+from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 # Create your views here.
 
 def home(request):
@@ -30,7 +32,7 @@ def signin(request):
 
 @login_required
 def diary(request):
-	diary=Diary.objects.filter(user=request.user)
+	diary=Diary.objects.filter(user=request.user).order_by('-dateaccessed')
 	return render(request, 'functions/diary.html', {'diary':diary})
 
 
@@ -73,10 +75,20 @@ def viewdiary(request, diary_pk):
 	else:
 		try:
 			form=Content_field(request.POST ,instance=diarys)
+			diarys.dateaccessed=timezone.now()
 			form.save()
 			return redirect('diary')
 		except ValueError:
 			return render(request, 'functions/viewdiary.html', {'diarys':diarys , 'form':form , 'error':'bad info'})
+
+
+@login_required
+def delete_diary(request, diary_pk):
+	diary=get_object_or_404(Diary, pk=diary_pk, user=request.user)
+	if request.method=='POST':
+		diary.delete()
+		return redirect('diary')
+
 
 
 
