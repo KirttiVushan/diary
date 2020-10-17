@@ -9,6 +9,6 @@ class Content_field(forms.ModelForm):
 
 
 		widgets={
-			'title': forms.TextInput(attrs={'class': 'textinputclass'}),
-			'content' : forms.Textarea(attrs={'class': 'editable medium-editor-textarea '})
+			'title': forms.TextInput(attrs={'class': 'textinputclass titled'}),
+			'content' : forms.Textarea(attrs={'class': 'editable medium-editor-textarea save_diary'})
 		}

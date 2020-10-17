@@ -91,6 +91,5 @@ def delete_diary(request, diary_pk):
 
 
 
-
 def about(request):
 	return render (request, 'functions/about.html')

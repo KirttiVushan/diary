@@ -1,4 +1,4 @@
-{% extends 'functions/base.html' %}
+{% extends 'functions/base2.html' %}
 
 {% block content %}
 
@@ -28,11 +28,11 @@
   		<input type="password" name="password" class="form-control" id="password">
 	</div>
 
-	<button type="submit" class="btn btn-primary">Login</button>
+	<button type="submit" class="btn btn-secondary">Login</button>
 </form>
 
 <div class="text-center">
-	Need an account? <a href="{% url 'signin' %}">Sign Up here</a>
+	Get Registered <a href="{% url 'signin' %}">Sign Up here</a>
 </div>
 
 {% endblock %}

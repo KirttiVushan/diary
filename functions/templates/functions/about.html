@@ -1,12 +1,25 @@
-{% extends 'functions/base.html' %}
+{% extends 'functions/base2.html' %}
 
 {% block content %}
 
-<h1>A project based on Django. A diary app where people can write their important events, activities and secrets also. The content is hidden from admin </h1>
-<h2>Photo Credits</h2>
-<span>Photo by <a href="https://unsplash.com/@fotografierende?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">fotografierende</a> on <a href="https://unsplash.com/s/photos/diary?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
-<h2>Library credits</h2>
-<a href="https://yabwe.github.io/medium-editor/demo.html"><h3>Medium.com editor</h3></a>
+<div class="about">
+	<h1><u>About</u></h1>
+	<p>This is a project made in Django , a framework of Python.</p>
+	<p>It's a <strong>CRUD</strong> view where one can Create , Retrieve,  Update and Delete</p>
+	<p>Full authentication system done in Django</p>
+	<br>
+	<p><strong>It is a simple Diary application where one can create new  diary and and update it whenever necessary and delete it as per means</p>
+	<p>The Admin can view the users only and not the contents</strong></p>
+	<br>
+</div>
+<div class="footer">
+	<h1><u>Creator</u></h1>
+	<p>The project is created by <strong>Kirtti Vushan Talukdar</strong></p>
+	{% load static %}
+	<p>Full documentation can be found on Github: <a href="https://github.com/KirttiVushan/diary.git"><img src="{% static 'images/git.png' %}"></a></p>
+	{% load static %}
+	<p>Connect with creator on LinkedIn : <a href="https://www.linkedin.com/in/kirttivushan-talukdar-57560b1a4/"><img id="li" src="{% static 'images/LI-In-Bug.png' %}"/></a></p>
+</div>
 
 {% endblock %}

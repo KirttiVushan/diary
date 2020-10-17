@@ -2,20 +2,21 @@
 
 {% block content %}
 
-{{ diarys.title }}
 
+<!-- update and delete view -->
 
+<p id="lastaccessed" class="text-info"><strong>Last accessed</strong> {{ diarys.dateaccessed }}</p>
 
-<form method="POST">
+<form method="POST" class="new_diary">
 	{% csrf_token %}
 	{{ form.as_p }}
-  <button type="submit">Save</button>
+  <div class="button_action"><button  type="submit" class="btn btn-success">Save</button></div>
 </form>
 
 
-<form method="POST" action="{% url 'delete_diary' diarys.id %}">
+<form method="POST" action="{% url 'delete_diary' diarys.id %}" class="new_diary">
 	{% csrf_token %}
-  <button  type="submit">Delete</button>
+  <div class="button_action"><button id="delete" class="btn btn-danger" type="submit">Delete</button></div>
 </form>
 
 

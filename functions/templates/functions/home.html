@@ -1,6 +1,21 @@
-{% extends 'functions/base.html' %}
+{% extends 'functions/base2.html' %}
 
 {% block content %}
+
+
+<div class="jumbotron">
+  <div class="jumbotron text-center">
+  <h1 class="display-4">Diary</h1>
+  <p class="lead">This is a simple diary. Just Sign in to get Started </p>
+  <hr class="my-4">
+  <p>All your secrets are kept hidden</p>
+  <a class="btn btn-secondary btn-lg" href="{% url 'signin' %}" role="button">Signup</a>
+  <a class="btn btn-secondary btn-lg" href="{% url 'login_user' %}" role="button">Login</a>
+  </div>
+</div>
+
+
+<a href="{% url 'about' %}"><button id="footer" type="button" class="btn btn-outline-secondary">About</button></a>
 
 
 {% endblock %}

@@ -9,6 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@900&display=swap" rel="stylesheet"> 
+
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
 
@@ -19,15 +22,17 @@
     <title>Diary</title>
   </head>
   <body>
-    <h1 id="tag">HELLO</h1>
-      
+    
+      <!-- base for home and authentication -->
   	
   	  <!-- if user logged in -->
 
     {% if user.is_authenticated %}
 
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-     <a class="navbar-brand" href="#">Diary</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="diary_button">
+     <button id="main" class="btn btn-link" type="button"><a class="navbar-brand" href="{% url 'diary' %}">Diary</a></button>
+     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,10 +40,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'new' %}">New Diary <span class="sr-only">(current)</span></a>
+        
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'diary' %}">Diary</a>
       </li>
      </ul>
      <form class="form-inline my-2 my-lg-0" action="{% url 'logout_user' %}" method="POST">
@@ -48,23 +52,20 @@
     </div>
     </nav>
 
-    <div id="welcome">
-    Welcome {{ user.username }}
+    <br>
+    <br>
+    <div id="welcome" >
+    <p id="user_wel" class=>Welcome {{ user.username }}</p>
     </div>
+    <hr>
 
     <!-- if user not logged In -->
 
     {% else %}
 
-    <div class="register">
-	<button><a href="{% url 'signin' %}">Sign up</a></button>
-    <button><a href="{% url 'login_user' %}">Login</a></button>
-    </div>
+    
 
-    <div class="footer">
-    <a href="{% url 'about' %}">About</a>
-    </div>
-    </div>
+    
 
     {% endif %}
 

@@ -2,13 +2,14 @@
 
 {% block content %}
 
+<!-- create view -->
 
 <h2>{{error}}</h2>
-<form method="POST">
-{% csrf_token %}
-{{form.as_p}}
-
-<button type="submit">Save</button>
+<form method="POST" class="new_diary">
+	<div class="form-group">
+	{% csrf_token %}
+	{{ form.as_p }}
+<div class="button_action"><button  class="btn btn-success" type="submit">Save</button></div>
 </form>
 
 

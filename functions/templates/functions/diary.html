@@ -3,11 +3,19 @@
 {% block content %}
 
 
-<ul>
-	{% for diary in diary %}
-	<li><a href="{% url 'viewdiary' diary.id %}">{{diary.title}}</a></li>
-	{% endfor %}
-</ul>
+<div class="row justify-content-center mt-5">
+  <div class="col-md-10">
+	<div class="list-group">
+		{% for diary in diary %}
+		<a href="{% url 'viewdiary' diary.id %}" class="list-group-item list-group-item-action" >{{diary.title}}</a>
+		{% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="new_button">
+<button id="button_responsive" class="btn btn-outline-success" type="button"><a class="nav-link" href="{% url 'new' %}">New Diary <span class="sr-only">(current)</span></a></button>
+</div>
 
 
 
