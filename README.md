@@ -72,7 +72,7 @@ the users information is secure *as no person wants to reveal whats in their dia
 
 <img src="github_images/medium.PNG">
 
-This is medium.com editor. Some kry features includes :
+This is medium.com editor. Some key features includes :
 - Italicze text
 - Boldens text
 - put links
