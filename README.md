@@ -16,15 +16,15 @@
 
 #### Home page
 
-<img src="github_images/Homepage.PNG" height="50" width="50">
+<img src="github_images/Homepage.PNG">
 
 This is the homepage
 
-<img src="github_images/signin.PNG" height="50" width="50">
+<img src="github_images/signin.PNG" >
 
 Signing in user
 
-<img src="github_images/login.PNG" height="50" width="50">
+<img src="github_images/login.PNG">
 
 login user
 
@@ -32,23 +32,23 @@ login user
 
 #### Web App
 
-<img src="github_images/diary.PNG" height="50" width="50">
+<img src="github_images/diary.PNG" >
 
 The Landing page after loging in
 
-<img src="github_images/creation.PNG" height="50" width="50">
+<img src="github_images/creation.PNG">
 
 write your secrets , letter to your crush , letter to yourself and **save** it . 
 
-<img src="github_images/aftersave.PNG" height="50" width="50">
+<img src="github_images/aftersave.PNG">
 
 after saving , now the user is able to access the diary .
 
-<img src="github_images/action.PNG" height="50" width="50">
+<img src="github_images/action.PNG">
 
 deletetion or updation of the diary .
 
-<img src="github_images/change.PNG" height="50" width="50">
+<img src="github_images/change.PNG">
 
 the last accessed date reveals the last time user performed action on it and also lists the diaries according to the latest diary accessed.
 
@@ -56,21 +56,21 @@ the last accessed date reveals the last time user performed action on it and als
 
 ### Admin
 
-<img src="github_images/admin.PNG" height="50" width="50">
+<img src="github_images/admin.PNG">
 
 the admin page wont store any content from the user.
 
-<img src="github_images/admin2.PNG" height="50" width="50">
+<img src="github_images/admin2.PNG">
 
 the users information is secure *as no person wants to reveal whats in their diary* .
 
-<img src="github_images/admin3.PNG" height="50" width="50">
+<img src="github_images/admin3.PNG">
 
 ---
 
 ### Library used
 
-<img src="github_images/medium.PNG" height="50" width="50">
+<img src="github_images/medium.PNG">
 
 This is medium.com editor. Some kry features includes :
 - Italicze text
